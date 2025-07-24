@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	
+	<name>[FSF] Better Exploration Loot</name>
+	<author>FrozenSnowFox</author>
+	<packageId>FrozenSnowFox.BetterExplorationLoot</packageId>
+	<modIconPath IgnoreIfNoMatchingField="True">ModIcon/FSFModIcon</modIconPath>
+	<description>Modifies the loot tables for a variety of things in the world to provide better and more worthwhile rewards.</description>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<loadAfter>
+		<li>GarryFlowers.ResearchAppropriation</li>
+		<li>OskarPotocki.VFE.Insectoid</li>
+		<li>OskarPotocki.VFE.Vikings</li>
+		<li>sarg.alphagenes</li>
+		<li>sarg.alphacrafts</li>
+		<li>SGC.quests</li>
+		<li>VanillaExpanded.VBooksE</li>
+		<li>VanillaExpanded.VBrewE</li>
+		<li>VanillaExpanded.VPsycastsE</li>
+	</loadAfter>
+	<incompatibleWith>
+		<li>FrozenSnowFox.BetterAncientComplexLoot</li>
+		<li>FrozenSnowFox.BetterAnomalyLoot</li>
+		<li>FrozenSnowFox.BetterCampLoot</li>
+	</incompatibleWith>
+	
+</ModMetaData>

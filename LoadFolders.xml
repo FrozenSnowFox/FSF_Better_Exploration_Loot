@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<loadFolders>
+	
+	<v1.6>	
+
+		<!-- Ludeon -->
+		
+		<!-- Core -->
+		
+		<li>/</li>
+		<li>1.6/Ludeon/Core</li>
+		
+		<!-- Core No DLC Ideology -->
+		<!-- Note: This should load only the Low Value Loot Box present in Core -->
+		<li IfModNotActive="Ludeon.RimWorld.Ideology">1.6/Ludeon/Core No Ideology</li>
+		
+		<!-- DLC Ideology -->
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/Ludeon/Ideology</li>
+		
+		<!-- DLC Anomaly -->
+		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/Ludeon/Anomaly</li>
+		
+		<!-- DLC Odyssey -->
+		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/Ludeon/Odyssey</li>
+		
+		
+		
+		<!-- Frameworks -->
+		
+		<!-- XML Extensions 
+		<li IfModActive="imranfish.xmlextensions">1.6/Frameworks/XML Extensions</li>
+-->
+		
+	</v1.6>
+	
+</loadFolders>
