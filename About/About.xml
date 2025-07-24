@@ -12,6 +12,7 @@
 	</supportedVersions>
 	<loadAfter>
 		<li>GarryFlowers.ResearchAppropriation</li>
+		<li>miho.fortifiedoutremer</li>
 		<li>OskarPotocki.VFE.Insectoid</li>
 		<li>OskarPotocki.VFE.Vikings</li>
 		<li>sarg.alphagenes</li>
@@ -25,6 +26,7 @@
 		<li>FrozenSnowFox.BetterAncientComplexLoot</li>
 		<li>FrozenSnowFox.BetterAnomalyLoot</li>
 		<li>FrozenSnowFox.BetterCampLoot</li>
+		<li>FrozenSnowFox.EncounterMapResources</li>
 	</incompatibleWith>
 	
 </ModMetaData>

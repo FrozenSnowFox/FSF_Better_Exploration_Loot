@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
 
-<!--
-	Value Range
-	- Cheap Items 400-800
-	- Expensive Items 1-2k+
- -->
-	
-<!-- Ancient Dangers -->
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
 
-  <ThingSetMakerDef>
-    <defName>MapGen_AncientTempleContents</defName>
+			<!-- Better Ancient Dangers -->
+			<!-- Note: Run as a patch so it runs after mods trying to patch Ancient Dangers -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingSetMakerDef[defName = "MapGen_AncientTempleContents"]/root</xpath>
+				<value>
+					
     <root Class="ThingSetMaker_RandomOption">
       <options>
 
@@ -443,9 +444,29 @@
             </fixedParams>
           </thingSetMaker>
         </li>
+		  
+        <!-- Miho The Celestial Fox -->
+        <li MayRequire="miho.fortifiedoutremer">
+          <weight>0.1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>Miho_ExoticMatter</li>
+                </thingDefs>
+              </filter>
+              <countRange>3~6</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
 
       </options>
     </root>
-  </ThingSetMakerDef>
-
-</Defs>
+					
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+</Patch>
