@@ -480,7 +480,10 @@
     </root>
   </ThingSetMakerDef>
 	
-        <!-- Note: Ancient Safe seems to be essentially High Value Crate -->
+        <!--
+			Note: Ancient Safe seems to be essentially High Value Crate
+				Maps should have the same weight as every other table combined but divide it by 2 since we're giving 2 maps
+		-->
 
   <ThingSetMakerDef>
     <defName>Reward_AncientSafe</defName>
@@ -506,7 +509,7 @@
 
         <!-- Map -->
         <li MayRequire="Ludeon.RimWorld.Odyssey">
-          <weight>6</weight>
+          <weight>5</weight>
           <thingSetMaker Class="ThingSetMaker_Count">
             <fixedParams>
               <qualityGenerator>Reward</qualityGenerator>
@@ -1017,6 +1020,399 @@
               </filter>
               <countRange>1</countRange>
             </fixedParams>
+          </thingSetMaker>
+        </li>
+
+      </options>
+    </root>
+  </ThingSetMakerDef>
+	
+	<!-- Malfunctioning Transport Pod -->
+	<!--
+		Note: Original loot was Resources, Drugs, Food and Corpses
+			Seems comparable to a High Value Crate, given the original table I decided to make specialised towards "what would you take in a transport pod with you"
+	-->
+	
+  <ThingSetMakerDef>
+    <defName>Reward_MalfunctioningTransportPod</defName>
+    <root Class="ThingSetMaker_RandomOption">
+      <options>
+
+        <!-- Random resources -->
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>ResourcesRaw</li>
+                  <li>Wools</li>
+                  <li>Leathers</li>
+                  <li>Textiles</li>
+                </categories>
+                <thingSetMakerTagsToDisallow>
+                  <li>RewardStandardHighFreq</li>
+                  <li>RewardStandardCore</li>
+                </thingSetMakerTagsToDisallow>
+              </filter>
+              <countRange>45~75</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+
+        <!-- Drugs -->
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_StackCount">
+                  <fixedParams>
+					<maxThingMarketValue>100</maxThingMarketValue>
+                    <filter>
+                      <categories>
+                        <li>Drugs</li>
+                      </categories>
+                    </filter>
+					<countRange>15~25</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+		  
+        <!-- Food -->
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_Nutrition">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>Foods</li>
+                </categories>
+                <disallowWorsePreferability>RawBad</disallowWorsePreferability>
+                <disallowWithComp>CompHatcher</disallowWithComp>
+                <disallowInedibleByHuman>true</disallowInedibleByHuman>
+              </filter>
+              <totalNutritionRange>4~8</totalNutritionRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <!-- Alpha Crafts - Artisan Products -->		  
+        <li MayRequire="sarg.alphacrafts">
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>AC_ArtisanProducts</li>
+                </categories>
+              </filter>
+              <countRange>6~12</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <!-- Luciferium -->
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+				  <li>Luciferium</li>
+                </thingDefs>
+              </filter>
+              <countRange>6~12</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <!-- Medicine -->
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>MedicineIndustrial</li>
+                  <li>MedicineUltratech</li>
+				  <li>Penoxycyline</li>
+                </thingDefs>
+              </filter>
+              <countRange>8~16</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <!-- Chemfuel -->
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>Chemfuel</li>
+                </thingDefs>
+              </filter>
+              <countRange>100~200</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+
+        <!-- Silver -->
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>Silver</li>
+                </thingDefs>
+              </filter>
+              <countRange>200~400</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <!-- Gold -->
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>Gold</li>
+                </thingDefs>
+              </filter>
+              <countRange>40~80</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <!-- Books -->
+        <li>
+          <weight>1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+			  <qualityGenerator>Super</qualityGenerator>
+              <filter>
+                <thingDefs>
+                  <li MayRequire="Ludeon.RimWorld.Odyssey">Map</li>
+				  <li>Novel</li>
+				  <li>Schematic</li>
+				  <li>TextBook</li>
+				  <li MayRequire="Ludeon.RimWorld.Anomaly">Tome</li>
+                </thingDefs>
+              </filter>
+              <countRange>2</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <!-- Special Rewards -->
+        <li>
+          <weight>0.2</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingDefs>
+                  <li>Apparel_PsychicInsanityLance</li>
+                  <li>Apparel_PsychicShockLance</li>
+                  <li>MechSerumHealer</li>
+                  <li>MechSerumResurrector</li>
+                  <li>OrbitalTargeterBombardment</li>
+                  <li>OrbitalTargeterPowerBeam</li>
+                  <li>PsychicAnimalPulser</li>
+                  <li>PsychicEmanator</li>
+                  <li>PsychicSoothePulser</li>
+				  <li>ReinforcedBarrel</li>
+                  <li>Shell_AntigrainWarhead</li>
+                  <li>TechprofSubpersonaCore</li>
+                  <li>TornadoGenerator</li>
+                  <li>VanometricPowerCell</li>
+                  <li MayRequire="Ludeon.RimWorld.Royalty">OrbitalTargeterMechCluster</li>
+                  <li MayRequire="Ludeon.RimWorld.Biotech">DeathrestCapacitySerum</li>
+                  <li MayRequire="Ludeon.RimWorld.Anomaly">BiomutationPulser</li>
+                  <li MayRequire="Ludeon.RimWorld.Anomaly">Apparel_BiomutationLance</li>
+                </thingDefs>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+              <!-- Note: Weights must be balanced against the number of items in each category -->
+
+              <!-- A category for core vanilla rewards, which should remain undilluted by future DLCs -->
+              <li>
+                <weight>0.15</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <qualityGenerator>Super</qualityGenerator>
+                    <allowNonStackableDuplicates>False</allowNonStackableDuplicates>
+                    <filter>
+                      <thingSetMakerTagsToAllow>
+                        <li>RewardStandardCore</li>
+                      </thingSetMakerTagsToAllow>
+                    </filter>
+              		<countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+		  
+              <!-- Three tiers of misc items, with different preference levels --> 
+              <li>
+                <weight>0.25</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <qualityGenerator>Super</qualityGenerator>
+                    <allowNonStackableDuplicates>False</allowNonStackableDuplicates>
+                    <filter>
+                      <thingSetMakerTagsToAllow>
+                        <li>RewardStandardHighFreq</li>
+                      </thingSetMakerTagsToAllow>
+                    </filter>
+              		<countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.126</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <qualityGenerator>Super</qualityGenerator>
+                    <allowNonStackableDuplicates>False</allowNonStackableDuplicates>
+                    <filter>
+                      <thingSetMakerTagsToAllow>
+                        <li>RewardStandardMidFreq</li>
+                      </thingSetMakerTagsToAllow>
+                    </filter>
+					<countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.05</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <qualityGenerator>Super</qualityGenerator>
+                    <allowNonStackableDuplicates>False</allowNonStackableDuplicates>
+                    <filter>
+                      <thingSetMakerTagsToAllow>
+                        <li>RewardStandardLowFreq</li>
+                      </thingSetMakerTagsToAllow>
+                    </filter>
+					<countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+		  
+              <!-- Normal items, but in masterwork/legendary quality -->
+              <li>
+                <weight>0.076</weight>
+                <thingSetMaker Class="ThingSetMaker_Count">
+                  <fixedParams>
+                    <qualityGenerator>Super</qualityGenerator>
+                    <allowNonStackableDuplicates>False</allowNonStackableDuplicates>
+                    <filter>
+                      <thingSetMakerTagsToAllow>
+                        <li>RewardStandardQualitySuper</li>
+                      </thingSetMakerTagsToAllow>
+                    </filter>
+					<countRange>1</countRange>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+		  
+              <!-- Special royal items -->
+              <!-- Most factions can't make these, so if we're using a faction that can we want
+                   the probability of using them to be high. In addition, Empire usually gives
+                   honor so if they're giving items we want it to be one of their special
+                   items. -->
+              <li MayRequire="Ludeon.RimWorld.Royalty">
+                <weight>0.1</weight> 
+                  <thingSetMaker Class="ThingSetMaker_Count">
+                    <fixedParams>
+                      <qualityGenerator>Super</qualityGenerator>
+                      <allowNonStackableDuplicates>False</allowNonStackableDuplicates>
+                      <filter>
+                        <thingSetMakerTagsToAllow>
+                          <li>ImplantEmpireRoyal</li>
+                          <li>WeaponBladelink</li>
+                        </thingSetMakerTagsToAllow>
+                        <thingSetMakerTagsToDisallow>
+                          <li>RewardNonEmpireFactionsOnly</li>
+                        </thingSetMakerTagsToDisallow>
+                        <tradeTagsToAllow>
+                          <li>PsychicWeapon</li>
+                          <li>PsychicApparel</li>
+                        </tradeTagsToAllow>
+                      </filter>
+					  <countRange>1</countRange>
+                    </fixedParams>
+                  </thingSetMaker>
+              </li>
+		  
+        <!-- Unique weapon -->
+        <li MayRequire="Ludeon.RimWorld.Odyssey">
+          <weight>0.076</weight>
+          <thingSetMaker Class="ThingSetMaker_Count">
+            <fixedParams>
+              <qualityGenerator>Super</qualityGenerator>
+              <filter>
+                <thingSetMakerTagsToAllow>
+                  <li>UniqueWeapon</li>
+                </thingSetMakerTagsToAllow>
+              </filter>
+			  <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <!-- Vanilla Brewing Expanded -->
+        <li MayRequire="VanillaExpanded.VBrewE">
+          <weight>0.2</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+			  <qualityGenerator>Super</qualityGenerator>
+              <filter>
+                <thingDefs>
+				  <li>VBE_Ambrandy</li>
+                </thingDefs>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+
+        <!-- Corpses -->
+        <li>
+          <weight>0.75</weight>
+          <thingSetMaker Class="ThingSetMaker_Pawn">
+            <pawnKind>TradersGuild_Citizen</pawnKind>
+            <alive>false</alive>
+            <corpseAgeRangeDays>5~10</corpseAgeRangeDays>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>0.75</weight>
+          <thingSetMaker Class="ThingSetMaker_Pawn">
+            <pawnKind>TradersGuild_Gunner</pawnKind>
+            <alive>false</alive>
+            <corpseAgeRangeDays>5~10</corpseAgeRangeDays>
+          </thingSetMaker>
+        </li>
+        <li>
+          <weight>0.75</weight>
+          <thingSetMaker Class="ThingSetMaker_Pawn">
+            <pawnKind>TradersGuild_Heavy</pawnKind>
+            <alive>false</alive>
+            <corpseAgeRangeDays>5~10</corpseAgeRangeDays>
+          </thingSetMaker>
+        </li>
+
+        <!-- Pawns -->
+        <li>
+          <weight>1.5</weight>
+          <thingSetMaker Class="ThingSetMaker_Pawn">
+            <pawnKind>Salvager_Pirate</pawnKind>
           </thingSetMaker>
         </li>
 
