@@ -2,7 +2,10 @@
 <Defs>
 	
 <!-- Gray Box Low Value -->
-<!-- Value based on Low Value Crate from Ancient Complex Loot with a high amount of trash loot due to the number of them found -->
+<!--
+	Value based on Low Value Crate from Ancient Complex Loot with a high amount of trash loot due to the number of them found
+	Note: Trash weight is set to 2 Trash 1 Loot.
+-->
 
   <ThingSetMakerDef>
     <defName>Reward_GrayBoxLowReward</defName>

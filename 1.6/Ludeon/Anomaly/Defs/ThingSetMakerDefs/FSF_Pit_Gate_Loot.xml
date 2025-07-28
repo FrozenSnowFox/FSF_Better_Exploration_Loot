@@ -2,7 +2,10 @@
 <Defs>
 
 <!-- Flesh Sack Loot -->	
-<!-- Value based on High Value Crate from Ancient Complex Loot -->
+<!--
+	Value based on High Value Crate from Ancient Complex Loot
+	Note: Corpse Weight should be about 1 Corpse 3 Loot
+-->
 	
   <ThingSetMakerDef>
     <defName>MapGen_FleshSackLoot</defName>
@@ -10,7 +13,7 @@
       <options>
         <!-- Corpses -->
         <li>
-          <weight>1</weight>
+          <weight>0.75</weight>
           <thingSetMaker Class="ThingSetMaker_Pawn">
             <pawnKind>Pirate</pawnKind>
             <alive>false</alive>
@@ -18,7 +21,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>1</weight>
+          <weight>0.75</weight>
           <thingSetMaker Class="ThingSetMaker_Pawn">
             <pawnKind>PirateBoss</pawnKind>
             <alive>false</alive>
@@ -26,7 +29,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>1</weight>
+          <weight>0.75</weight>
           <thingSetMaker Class="ThingSetMaker_Pawn">
             <pawnKind>Villager</pawnKind>
             <alive>false</alive>
@@ -34,7 +37,7 @@
           </thingSetMaker>
         </li>
         <li>
-          <weight>1</weight>
+          <weight>0.75</weight>
           <thingSetMaker Class="ThingSetMaker_Pawn">
             <pawnKind>Town_Guard</pawnKind>
             <alive>false</alive>
@@ -42,7 +45,7 @@
           </thingSetMaker>
         </li>
         <li MayRequire="Ludeon.RimWorld.Royalty">
-          <weight>1</weight>
+          <weight>0.75</weight>
           <thingSetMaker Class="ThingSetMaker_Pawn">
             <pawnKind>Empire_Common_Laborer</pawnKind>
             <alive>false</alive>
@@ -50,7 +53,7 @@
           </thingSetMaker>
         </li>
         <li MayRequire="Ludeon.RimWorld.Royalty">
-          <weight>1</weight>
+          <weight>0.75</weight>
           <thingSetMaker Class="ThingSetMaker_Pawn">
             <pawnKind>Empire_Fighter_Cataphract</pawnKind>
             <alive>false</alive>
