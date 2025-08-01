@@ -309,6 +309,9 @@
                       <thingSetMakerTagsToAllow>
                         <li>RewardStandardCore</li>
                       </thingSetMakerTagsToAllow>
+                      <disallowedThingDefs>
+                        <li>Hyperweave</li>
+                      </disallowedThingDefs>
                     </filter>
               		<countRange>2</countRange>
                   </fixedParams>
