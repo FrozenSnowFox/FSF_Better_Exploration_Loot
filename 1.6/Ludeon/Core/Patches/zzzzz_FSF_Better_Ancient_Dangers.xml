@@ -465,6 +465,57 @@
             </fixedParams>
           </thingSetMaker>
         </li>
+		  
+        <!-- HALO: Rimworld Psychic Pulse Armory (Continued) -->
+        <li MayRequire="Mlie.HaloRimworldPsychicPulseArmory">
+          <weight>0.8</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+			  <qualityGenerator>Super</qualityGenerator>
+              <filter>
+                <thingDefs>
+					<li>HRPPA_PsychicPulseCannon</li>
+					<li>HRPPA_PsychicPulseRepeater</li>
+					<li>HRPPA_PsychicPulseScatter</li>
+					<li>HRPPA_PsychicPulseGrenade</li>
+                </thingDefs>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <li MayRequire="Mlie.HaloRimworldPsychicPulseArmory">
+          <weight>0.4</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+			  <qualityGenerator>Super</qualityGenerator>
+              <filter>
+                <thingDefs>
+					<li>HRPPA_PsychicPulseSpinner</li>
+					<li>HRPPA_PsychicPulseReacher</li>
+					<li>HRPPA_PsychicPulseBlade</li>
+                </thingDefs>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		  
+        <li MayRequire="Mlie.HaloRimworldPsychicPulseArmory">
+          <weight>0.2</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+			  <qualityGenerator>Super</qualityGenerator>
+              <filter>
+                <thingDefs>
+					<li>HRPPA_PsychicPulseLancer</li>
+                </thingDefs>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
 
       </options>
     </root>
