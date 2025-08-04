@@ -295,7 +295,10 @@
                         <li>RewardStandardCore</li>
                       </thingSetMakerTagsToAllow>
                       <disallowedThingDefs>
+                        <li>ComponentSpacer</li>
                         <li>Hyperweave</li>
+                        <li>Luciferium</li>
+                        <li>MedicineUltratech</li>
                       </disallowedThingDefs>
                     </filter>
               		<countRange>1</countRange>
@@ -826,7 +829,10 @@
                         <li>RewardStandardCore</li>
                       </thingSetMakerTagsToAllow>
                       <disallowedThingDefs>
+                        <li>ComponentSpacer</li>
                         <li>Hyperweave</li>
+                        <li>Luciferium</li>
+                        <li>MedicineUltratech</li>
                       </disallowedThingDefs>
                     </filter>
               		<countRange>1</countRange>
@@ -1058,7 +1064,6 @@
                 </categories>
                 <thingSetMakerTagsToDisallow>
                   <li>RewardStandardHighFreq</li>
-                  <li>RewardStandardCore</li>
                 </thingSetMakerTagsToDisallow>
               </filter>
               <countRange>45~75</countRange>
@@ -1258,7 +1263,10 @@
                         <li>RewardStandardCore</li>
                       </thingSetMakerTagsToAllow>
                       <disallowedThingDefs>
+                        <li>ComponentSpacer</li>
                         <li>Hyperweave</li>
+                        <li>Luciferium</li>
+                        <li>MedicineUltratech</li>
                       </disallowedThingDefs>
                     </filter>
               		<countRange>1</countRange>
