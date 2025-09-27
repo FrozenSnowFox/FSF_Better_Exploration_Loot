@@ -332,6 +332,9 @@
                       <thingSetMakerTagsToAllow>
                         <li>RewardStandardHighFreq</li>
                       </thingSetMakerTagsToAllow>
+                      <disallowedThingDefs>
+                        <li MayRequire="VanillaExpanded.VPsycastsE">VPE_Eltex</li>
+                      </disallowedThingDefs>
                     </filter>
               		<countRange>2</countRange>
                   </fixedParams>
