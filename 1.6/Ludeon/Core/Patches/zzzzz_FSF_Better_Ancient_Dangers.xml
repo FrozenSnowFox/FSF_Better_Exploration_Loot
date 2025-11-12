@@ -516,6 +516,20 @@
             </fixedParams>
           </thingSetMaker>
         </li>
+		
+        <li MayRequire="GoGaTio.MechanoidUpgrades">
+          <weight>0.01</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <thingSetMakerTagsToAllow>
+                  <li>MU_ArchoUpgrades</li>
+                </thingSetMakerTagsToAllow>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
 
       </options>
     </root>
