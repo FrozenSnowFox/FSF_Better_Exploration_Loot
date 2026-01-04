@@ -573,6 +573,21 @@
             </fixedParams>
           </thingSetMaker>
         </li>
+		
+        <!-- Alpha Armoury -->
+        <li MayRequire="sarg.alphaarmoury">
+          <weight>0.1</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>AArmoury_WeaponKits</li>
+                </categories>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
 		  
         <!-- Psylink Amplifier -->
         <li MayRequire="Ludeon.RimWorld.Royalty">
@@ -1280,6 +1295,21 @@
             </fixedParams>
           </thingSetMaker>
         </li>
+		
+        <!-- Alpha Armoury -->
+        <li MayRequire="sarg.alphaarmoury">
+          <weight>0.2</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>AArmoury_WeaponKits</li>
+                </categories>
+              </filter>
+              <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
 		  
         <!-- Psylink Amplifier -->
         <li MayRequire="Ludeon.RimWorld.Royalty">
@@ -1752,6 +1782,21 @@
                 </thingSetMakerTagsToAllow>
               </filter>
 			  <countRange>1</countRange>
+            </fixedParams>
+          </thingSetMaker>
+        </li>
+		
+        <!-- Alpha Armoury -->
+        <li MayRequire="sarg.alphaarmoury">
+          <weight>0.25</weight>
+          <thingSetMaker Class="ThingSetMaker_StackCount">
+            <fixedParams>
+              <filter>
+                <categories>
+                  <li>AArmoury_WeaponKits</li>
+                </categories>
+              </filter>
+              <countRange>2</countRange>
             </fixedParams>
           </thingSetMaker>
         </li>
