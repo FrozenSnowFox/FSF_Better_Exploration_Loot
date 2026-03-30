@@ -483,21 +483,6 @@
             </fixedParams>
           </thingSetMaker>
         </li>
-		
-        <!-- Tech Hunter's Delight -->
-        <li MayRequire="lambda.TechHunting">
-          <weight>0.25</weight>
-          <thingSetMaker Class="ThingSetMaker_StackCount">
-            <fixedParams>
-              <filter>
-                <thingDefs>
-				  <li>AncientBookExcellent</li>
-                </thingDefs>
-              </filter>
-              <countRange>1</countRange>
-            </fixedParams>
-          </thingSetMaker>
-        </li>
 		  
         <!-- Vanilla Brewing Expanded -->
         <li MayRequire="VanillaExpanded.VBrewE">
@@ -1063,22 +1048,6 @@
                 <thingDefs>
 				  <li>GarryFlowers_SpacerResearchData</li>
 				  <li>GarryFlowers_UltraResearchData</li>
-                </thingDefs>
-              </filter>
-              <countRange>1</countRange>
-            </fixedParams>
-          </thingSetMaker>
-        </li>
-		
-        <!-- Tech Hunter's Delight -->
-        <li MayRequire="lambda.TechHunting">
-          <weight>0.2</weight>
-          <thingSetMaker Class="ThingSetMaker_StackCount">
-            <fixedParams>
-              <filter>
-                <thingDefs>
-				  <li>AncientBookGood</li>
-				  <li>AncientBookExcellent</li>
                 </thingDefs>
               </filter>
               <countRange>1</countRange>

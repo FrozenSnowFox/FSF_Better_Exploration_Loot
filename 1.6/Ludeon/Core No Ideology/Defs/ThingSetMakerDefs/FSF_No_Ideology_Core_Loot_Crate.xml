@@ -695,22 +695,6 @@
             </fixedParams>
           </thingSetMaker>
         </li>
-		
-        <!-- Tech Hunter's Delight -->
-        <li MayRequire="lambda.TechHunting">
-          <weight>0.1</weight>
-          <thingSetMaker Class="ThingSetMaker_StackCount">
-            <fixedParams>
-              <filter>
-                <thingDefs>
-				  <li>AncientBookGood</li>
-				  <li>AncientBookExcellent</li>
-                </thingDefs>
-              </filter>
-              <countRange>1</countRange>
-            </fixedParams>
-          </thingSetMaker>
-        </li>
 		  
         <!-- Vanilla Brewing Expanded -->
         <li MayRequire="VanillaExpanded.VBrewE">
