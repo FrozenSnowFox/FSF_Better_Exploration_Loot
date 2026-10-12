@@ -9,6 +9,7 @@
 	<description>Modifies the loot tables for a variety of things in the world to provide better and more worthwhile rewards.</description>
 	<supportedVersions>
 		<li>1.6</li>
+		<li>1.7</li>
 	</supportedVersions>
 	<loadAfter>
 		<li>GarryFlowers.ResearchAppropriation</li>

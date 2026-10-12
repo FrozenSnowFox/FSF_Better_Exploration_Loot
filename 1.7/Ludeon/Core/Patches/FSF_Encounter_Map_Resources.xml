@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+
+			<!-- Encounter Map Resources -->
+			
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/MapGeneratorDef[defName = "Encounter"]/genSteps/li[text()="RocksFromGrid_NoMinerals"]</xpath>
+				<match Class="PatchOperationReplace">
+					<xpath>/Defs/MapGeneratorDef[defName = "Encounter"]/genSteps/li[text()="RocksFromGrid_NoMinerals"]</xpath>
+					<value>
+						<li>RocksFromGrid</li>
+					</value>
+				</match>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+</Patch>
